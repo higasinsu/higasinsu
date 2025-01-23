@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>フルーツ五目</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  h1 {
+    font-family: "MS 明朝",serif; /*明朝体を指定*/
+  }
+  p {
+    font-family: "MS 明朝","ヒラギノ明朝",serif; 
+  }
+  span { 
+    font-family: "MS 明朝","ヒラギノ明朝",serif;
+  }
+</style>
+<body>
+  <!-- BGMと再生ボタン -->
+  <audio id="bgm" loop autoplay>
+    <source src="audio/korinsesi.mp3" type="audio/mpeg">
+    お使いのブラウザはオーディオタグをサポートしていません。
+  </audio>
+  <button id="toggle-bgm">🎵 音楽ON</button>
+
+  <script src="script.js"></script>
+
+<button id="toggle-sound-effects">🔊 効果音ON</button>
+
+<audio id="place-sound">
+  <source src="audio/KURIplace.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="start-cutin-sound" >
+<source src="audio/start_cutin_sound.mp3">
+</audio>
+
+<audio id="win-sound">
+  <source src="audio/KASSENwin.mp3" type="audio/mpeg">
+</audio>
+
+  <h1 style="text-align: center;">五目並べ - フルーツ版</h1>
+  <div id="mode-selection">
+    <p>ゲームモードを選んでください:</p>
+    <span class="mode" data-mode="player-vs-player">二人対戦</span>
+    <span class="mode" data-mode="player-vs-computer">コンピュータ対戦</span>
+  </div>
+  <div id="selection" style="display: none;">
+    <p>好きな駒を選んでください:</p>
+    <span class="fruit" data-fruit="🍎">リンゴ</span>
+    <span class="fruit" data-fruit="🍌">バナナ</span>
+    <span class="fruit" data-fruit="🍊">オレンジ</span>
+    <span class="fruit" data-fruit="🍇">ブドウ</span>
+    <span class="fruit" data-fruit="🍉">スイカ</span>
+  </div>
+  <div id="board">
+  </div>
+  <div id="cutin" style="display: none;">
+    <img id="cutinImage" src="" alt="カットイン画像" style="max-width: 100%; height: auto;">
+  </div>
+  <p style="text-align: center;" id="message"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
